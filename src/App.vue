@@ -1,7 +1,13 @@
 <template>
-  <div id="app">
-    <TodoForm />
-    <TodoList />
+  <div>
+    <b-container class="my-5">
+      <b-row>
+        <b-col md="4" offset-md="4">
+          <TodoForm />
+          <TodoList />
+        </b-col>
+      </b-row>
+    </b-container>
   </div>
 </template>
 
@@ -17,3 +23,9 @@ export default {
   }
 }
 </script>
+
+<style>
+  .cursor-pointer {
+    cursor: pointer
+  }
+</style>
