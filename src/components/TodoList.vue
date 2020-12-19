@@ -4,7 +4,9 @@
       <b-list-group-item
         v-for="(section, index) in sections" :key="index"
         class="d-flex justify-content-between align-items-center">
-          <span class="cursor-pointer">{{ section.name }}</span>
+          <span class="cursor-pointer" @click="$router.push('/section')">
+            {{ section.name }}
+          </span>
           <div>
             <b-badge pill variant="info" class="cursor-pointer mr-2" @click="showUpdateSectionDialog(section)">
                 <b-icon icon="pencil"></b-icon>
