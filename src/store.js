@@ -13,6 +13,9 @@ const store = new Vuex.Store({
         getSections: (state) => {
             return state.sections
         },
+        getCurrentSection: (state) => (id) => {
+            return state.sections.find(o => o.id === id) || { name: '' }
+        },
         getTasks: (state) => {
             return state.sections
         }

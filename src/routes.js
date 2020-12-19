@@ -8,7 +8,7 @@ import Task from './pages/Task.vue';
 const routes = [{
     path: '/', component: Todo
 }, {
-    path: '/section', component: Section
+    path: '/section/:id', component: Section
 }, {
     path: '/task', component: Task
 }]

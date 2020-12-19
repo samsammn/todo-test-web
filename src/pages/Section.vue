@@ -2,7 +2,7 @@
 	<b-container class="my-5">
 		<b-row>
 			<b-col md="4" offset-md="4">
-				<h2 class="diplay-1">Section 1</h2>
+				<h2 class="diplay-1">{{ currentSection.name }}</h2>
 				<TaskForm />
 				<TaskList />
 			</b-col>
@@ -19,6 +19,15 @@ export default {
   components: {
     TaskList,
     TaskForm
+	},
+	computed: {
+		currentSection() {
+			const id = this.$route.params.id || 0
+			return this.$store.getters.getSections.find(o => o.id === id) || { name: 'Test' }
+		}
+	},
+  mounted() {
+    this.$store.dispatch('getSections')
   }
 }
 </script>
